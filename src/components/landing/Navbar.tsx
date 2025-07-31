@@ -37,14 +37,14 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 {item.name}
               </button>
             ))}
             <Button 
               onClick={() => scrollToSection("#contact")}
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
             >
               Get Started
             </Button>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
+              className="p-2 text-foreground hover:text-primary transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -69,14 +69,14 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 >
                   {item.name}
                 </button>
               ))}
               <Button 
                 onClick={() => scrollToSection("#contact")}
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 w-full mt-4"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 w-full mt-4 text-white"
               >
                 Get Started
               </Button>
