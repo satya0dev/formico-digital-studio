@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				heading: ['Manrope', 'system-ui', 'sans-serif'],
+				heading: ['Outfit', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -106,6 +106,18 @@ export default {
 				'slide-up': {
 					'0%': { opacity: '0', transform: 'translateY(30px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 40px hsl(190 95% 39% / 0.3)' },
+					'50%': { boxShadow: '0 0 80px hsl(190 95% 39% / 0.5)' }
+				},
+				'text-shimmer': {
+					'0%': { backgroundPosition: '-200% center' },
+					'100%': { backgroundPosition: '200% center' }
 				}
 			},
 			animation: {
@@ -114,6 +126,9 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'slide-up': 'slide-up 0.5s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+				'text-shimmer': 'text-shimmer 2s linear infinite',
 			}
 		}
 	},
