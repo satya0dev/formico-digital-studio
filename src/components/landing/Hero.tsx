@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Zap, Code2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Advanced Background Effects */}
@@ -25,20 +25,6 @@ const Hero = () => {
         }}></div>
         </div>
 
-        {/* Floating tech icons */}
-        <div className="absolute top-1/4 left-16 opacity-20 animate-float">
-          <Code2 className="w-8 h-8 text-white" />
-        </div>
-        <div className="absolute top-1/3 right-20 opacity-20 animate-float" style={{
-        animationDelay: '1s'
-      }}>
-          <Zap className="w-6 h-6 text-white" />
-        </div>
-        <div className="absolute bottom-1/3 left-20 opacity-20 animate-float" style={{
-        animationDelay: '3s'
-      }}>
-          <Sparkles className="w-7 h-7 text-white" />
-        </div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -78,14 +64,10 @@ const Hero = () => {
           <div className="animate-scale-in" style={{
           animationDelay: '0.6s'
         }}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-              <Button size="lg" className="group bg-accent hover:bg-accent-light text-accent-foreground shadow-glow hover:shadow-xl transition-all duration-500 px-10 py-6 text-lg font-semibold rounded-2xl animate-glow-pulse">
-                Get Started Today
+            <div className="flex justify-center pt-8">
+              <Button size="lg" className="group bg-accent hover:bg-accent-light text-accent-foreground shadow-glow hover:shadow-xl transition-all duration-500 px-12 py-6 text-lg font-semibold rounded-2xl animate-glow-pulse">
+                Transform Your Business Now
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-              <Button variant="outline" size="lg" className="group border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-500 px-10 py-6 text-lg font-semibold rounded-2xl backdrop-blur-md">
-                View Our Work
-                <Sparkles className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </Button>
             </div>
           </div>
@@ -125,15 +107,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center gap-2">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center backdrop-blur-sm">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-          </div>
-          <span className="text-white/50 text-xs font-medium">Scroll to explore</span>
-        </div>
-      </div>
     </section>;
 };
 export default Hero;
